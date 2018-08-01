@@ -3,6 +3,9 @@ package org.cyberdojo.tests;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * Diversion
  * <p>
@@ -25,6 +28,7 @@ import java.util.List;
  *
  * @author f0rb on 2018-07-20.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Diversion {
     public static int execute(int n) {
 

@@ -1,5 +1,8 @@
 package org.cyberdojo.tests;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * NumberNames
  * <p>
@@ -20,6 +23,7 @@ package org.cyberdojo.tests;
  *
  * @author f0rb on 2018-07-24.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class NumberNames {
 
     public static final String[] enNum = {

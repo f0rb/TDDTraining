@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * Anagram
  * <p>
@@ -19,6 +22,7 @@ import java.util.List;
  *
  * @author f0rb on 2018-07-20.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class Anagram {
     public static List<String> of(String input) {
         if (input.length() >= 2) {

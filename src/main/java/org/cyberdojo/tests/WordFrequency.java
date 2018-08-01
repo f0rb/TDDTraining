@@ -2,12 +2,16 @@ package org.cyberdojo.tests;
 
 import java.util.*;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 
 /**
  * WordFrequency
  *
  * @author f0rb on 2018-07-31.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class WordFrequency {
     public static String process(String input) {
         String[] words = split(input);

@@ -2,11 +2,15 @@ package org.cyberdojo.tests;
 
 import java.util.*;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * PrimeFactors
  *
  * @author f0rb on 2018-07-23.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class PrimeFactors {
     private static Set<Integer> primeSet = new TreeSet<>(Arrays.asList(2, 3, 5, 7));
 

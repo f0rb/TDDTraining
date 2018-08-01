@@ -2,6 +2,9 @@ package org.cyberdojo.tests;
 
 import java.util.*;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 import static java.lang.Math.abs;
 
 /**
@@ -16,6 +19,7 @@ import static java.lang.Math.abs;
  *
  * @author f0rb on 2018-07-22.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class EightQueens {
 
 
