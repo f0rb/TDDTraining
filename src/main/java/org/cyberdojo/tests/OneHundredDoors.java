@@ -6,6 +6,9 @@ package org.cyberdojo.tests;
  * @author f0rb on 2018-08-07.
  */
 public class OneHundredDoors {
+    private OneHundredDoors() {
+    }
+
     public static boolean[] pass(int pass) {
         boolean[] booleans = new boolean[100];
 

@@ -30,7 +30,9 @@ public class BalancedParenthesesTest {
     @Test
     public void test_succeed() {
         assertTrue(BalancedParentheses.isBalanced("{}"));
-        assertTrue(BalancedParentheses.isBalanced("{{}}"));
+        assertTrue(BalancedParentheses.isBalanced("()"));
+        assertTrue(BalancedParentheses.isBalanced("[]"));
+        assertTrue(BalancedParentheses.isBalanced("{{a}}"));
         assertTrue(BalancedParentheses.isBalanced("[({})]"));
         assertTrue(BalancedParentheses.isBalanced("{()}[[{}]]"));
     }
@@ -42,5 +44,7 @@ public class BalancedParenthesesTest {
         assertFalse(BalancedParentheses.isBalanced("{{]}}"));
         assertFalse(BalancedParentheses.isBalanced("{{)(}}"));
         assertFalse(BalancedParentheses.isBalanced("({)}"));
+        assertFalse(BalancedParentheses.isBalanced("(]"));
+        assertFalse(BalancedParentheses.isBalanced("]"));
     }
 }

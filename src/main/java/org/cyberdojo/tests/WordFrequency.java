@@ -16,8 +16,7 @@ public class WordFrequency {
     public static String process(String input) {
         String[] words = split(input);
         Map<String, Integer> map = stat(words);
-        ArrayList<Map.Entry<String, Integer>> entries
-                = sorting(map);
+        ArrayList<Map.Entry<String, Integer>> entries = sorting(map);
         return format(entries);
     }
 
@@ -27,20 +26,14 @@ public class WordFrequency {
 
     private static Map<String, Integer> stat(String[] strings) {
         HashMap<String, Integer> wordMap = new HashMap<>();
-        for (String string : strings) {
-            wordMap.put(string, wordMap.getOrDefault(string, 0) + 1);
-        }
+        Arrays.stream(strings).filter(string -> !string.isEmpty()).forEachOrdered(string -> wordMap.put(string, wordMap.getOrDefault(string, 0) + 1));
         return wordMap;
     }
 
     private static String format(ArrayList<Map.Entry<String, Integer>> entries) {
         StringBuilder sb = new StringBuilder();
-        for (Map.Entry<String, Integer> entry : entries) {
-            sb.append(entry.getKey()).append(" ").append(entry.getValue()).append("\n");
-        }
-        if (sb.length() > 0) {
-            sb.deleteCharAt(sb.length() - 1);
-        }
+        entries.forEach(entry -> sb.append(entry.getKey()).append(" ").append(entry.getValue()).append("\n"));
+        sb.deleteCharAt(sb.length() - 1);
         return sb.toString();
     }
 

@@ -8,6 +8,8 @@ import java.util.Stack;
  * @author f0rb on 2018-08-07.
  */
 public class BalancedParentheses {
+    private BalancedParentheses() {
+    }
 
     public static boolean isBalanced(String input) {
         Stack<Character> stack = new Stack<>();
@@ -24,15 +26,14 @@ public class BalancedParentheses {
     }
 
     private static boolean isPair(char left, char right) {
-        if (left == '(') {
-            return right == ')';
+        switch (left) {
+            case '(':
+                return right == ')';
+            case '[':
+                return right == ']';
+            case '{':
+            default:
+                return right == '}';
         }
-        if (left == '[') {
-            return right == ']';
-        }
-        if (left == '{') {
-            return right == '}';
-        }
-        return false;
     }
 }

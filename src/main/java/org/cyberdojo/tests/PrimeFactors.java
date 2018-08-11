@@ -26,11 +26,9 @@ public class PrimeFactors {
             return Arrays.asList(input);
         }
 
-        int firstFactor;
-        for (firstFactor = 2; firstFactor < input; firstFactor++) {
-            if (isPrime(firstFactor) && isFactor(input, firstFactor)) {
-                break;
-            }
+        int firstFactor = 2;
+        while (!isPrime(firstFactor) || !isFactor(input, firstFactor)) {
+            firstFactor++;
         }
 
         List<Integer> results = new LinkedList<>();

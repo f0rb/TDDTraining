@@ -41,6 +41,7 @@ public class PrimeFactorsTest {
         assertFalse(PrimeFactors.isPrime(361));
 
         assertTrue(PrimeFactors.isPrime(2));
+        assertTrue(PrimeFactors.isPrime(-2));
         assertTrue(PrimeFactors.isPrime(3));
         assertTrue(PrimeFactors.isPrime(5));
         assertTrue(PrimeFactors.isPrime(11));
