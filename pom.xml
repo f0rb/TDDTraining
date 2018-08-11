@@ -8,6 +8,14 @@
     <artifactId>tests</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
+    <name>TDD exercise</name>
+    <description>TDD训练题目</description>
+    <url>https://tdd.doyto.win</url>
+    <organization>
+        <name>doyto.win</name>
+        <url>https://doyto.win</url>
+    </organization>
+
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -83,7 +91,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.7</version>
+                <version>3.0.1</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>3.0.0</version>
             </plugin>
 
             <!-- 单元测试报告html -->
