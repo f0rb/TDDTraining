@@ -105,7 +105,6 @@ public class NumberNames {
             ret++;
         }
         return ret;
-        //return i < THOUSAND ? 0 : (int) Math.floor(Math.log(i) / Math.log(THOUSAND));
     }
 
 

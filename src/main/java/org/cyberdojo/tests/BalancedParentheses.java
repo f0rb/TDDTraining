@@ -2,7 +2,6 @@ package org.cyberdojo.tests;
 
 import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Stack;
 
 /**
  * BalancedParentheses
