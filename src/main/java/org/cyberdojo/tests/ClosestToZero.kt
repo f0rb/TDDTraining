@@ -15,7 +15,7 @@ class ClosestToZero private constructor() {
                 }
             }
 
-            return numbers[pos];
+            return numbers[pos]
         }
     }
 

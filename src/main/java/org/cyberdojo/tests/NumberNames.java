@@ -26,18 +26,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class NumberNames {
 
-    public static final String[] enNum = {
+    private static final String[] enNum = {
             "", "one", "two", "three", "four", "five", "six", "seven", "eight",
             "nine", "ten", "eleven", "twelve", "thirteen", "fourteen",
             "fifteen", "sixteen", "seventeen", "eighteen", "nineteen",
             "twenty"
     };
 
-    public static final String[] decadeNum = {
+    private static final String[] decadeNum = {
             "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"
     };
 
-    public static final String[] enUnit = {
+    private static final String[] enUnit = {
             "hundred", "thousand", "million",
             "billion", "trillion", "quintillion"
     };
@@ -49,12 +49,7 @@ public class NumberNames {
         if (input == 0) {
             return "zero";
         }
-        return translate(input, getLogFor1000(input))
-                //.replace(" and zero", "")
-                //.replace(", zero million", "")
-                //.replace(", zero thousand", "")
-                //.replace(", zero", "")
-                ;
+        return translate(input, getLogFor1000(input));
     }
 
     public static String translate(long input, int group) {
@@ -110,7 +105,6 @@ public class NumberNames {
             ret++;
         }
         return ret;
-        //return i < THOUSAND ? 0 : (int) Math.floor(Math.log(i) / Math.log(THOUSAND));
     }
 
 
