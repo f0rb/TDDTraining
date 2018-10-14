@@ -1,5 +1,7 @@
 package org.cyberdojo.tests;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -12,17 +14,15 @@ public class BalancedParentheses {
     }
 
     public static boolean isBalanced(String input) {
-        Stack<Character> stack = new Stack<>();
+        Deque<Character> stack = new LinkedList<>();
         for (char c : input.toCharArray()) {
             if (c == '(' || c == '[' || c == '{') {
                 stack.push(c);
-            } else if (c == ')' || c == ']' || c == '}') {
-                if (stack.empty() || !isPair(stack.pop(), c)) {
-                    return false;
-                }
+            } else if ((c == ')' || c == ']' || c == '}') && (stack.isEmpty() || !isPair(stack.pop(), c))) {
+                return false;
             }
         }
-        return stack.empty();
+        return stack.isEmpty();
     }
 
     private static boolean isPair(char left, char right) {
