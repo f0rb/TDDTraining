@@ -12,13 +12,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TailRecursionTest {
 
     @Test
-    void test_fibonacciWithCache() {
+    public void test_fibonacciWithCache() {
         assertEquals(89, TailRecursion.fibonacciWithCache(10));
         assertEquals(34, TailRecursion.fibonacciWithCache(8));
         assertEquals(10946, TailRecursion.fibonacciWithCache(20));
     }
     @Test
-    void testFibonacci() {
+    public void testFibonacci() {
 
         assertEquals(1, TailRecursion.fibonacci(0));
         assertEquals(1, TailRecursion.fibonacci(1));
@@ -30,7 +30,7 @@ public class TailRecursionTest {
     }
 
     @Test
-    void testPower() {
+    public void testPower() {
         assertEquals(8, TailRecursion.pow(2, 3));
         assertEquals(25, TailRecursion.pow(5, 2));
         assertEquals(10000, TailRecursion.pow(10, 4));
@@ -38,14 +38,14 @@ public class TailRecursionTest {
 
 
     @Test
-    void testSum() {
+    public void testSum() {
         assertEquals(15, TailRecursion.sum(1, 1, 5));
         assertEquals(5050, TailRecursion.sum(1, 1, 100));
         assertEquals(5050, TailRecursion.sum(1, 2, 50) + TailRecursion.sum(2, 2, 50));
     }
 
     @Test
-    void test_factorial() {
+    public void test_factorial() {
         assertEquals(1, TailRecursion.factorial(1));
         assertEquals(120, TailRecursion.factorial(5));
 

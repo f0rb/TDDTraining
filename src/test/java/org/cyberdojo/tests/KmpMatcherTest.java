@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class KmpMatcherTest {
     @Test
-    void testIndexOf() {
+    public void testIndexOf() {
         assertEquals(2, KmpMatcher.indexOf("23234235678234567", "23423"));
         assertEquals(-1, KmpMatcher.indexOf("23234235678234567", "dfghj"));
         assertEquals(3, KmpMatcher.indexOf("sssssssss34", "ssssss3"));
@@ -24,7 +24,7 @@ public class KmpMatcherTest {
     }
 
     @Test
-    void testComputeNext() {
+    public void testComputeNext() {
         assertArrayEquals(new int[] {-1, 0, 0}, KmpMatcher.computeNext( "234"));
         //assertArrayEquals(new int[] {-1, 0, 0, 1}, KmpMatcher.computeNext( "2342"));
         assertArrayEquals(new int[] {-1, 0, 0, 0}, KmpMatcher.computeNext( "2342"));

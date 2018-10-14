@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class FibonacciTest {
     @Test
-    void testFibonacci() {
+    public void testFibonacci() {
         System.out.println(Fibonacci.calc(21));
 
         assertEquals(1, Fibonacci.calc(0));

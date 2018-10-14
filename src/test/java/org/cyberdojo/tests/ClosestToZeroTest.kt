@@ -1,3 +1,5 @@
+package org.cyberdojo.tests
+
 import org.cyberdojo.tests.ClosestToZero
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
