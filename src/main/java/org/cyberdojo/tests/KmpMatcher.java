@@ -1,10 +1,14 @@
 package org.cyberdojo.tests;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * KmpMatcher
  *
  * @author f0rb on 2018-09-14.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class KmpMatcher {
 
     public static int indexOf(String origin, String match) {
@@ -15,17 +19,6 @@ public class KmpMatcher {
         int len = origin.length();
         int matchLength = match.length();
         while (i - j < len - matchLength) {
-            //if (origin.charAt(i) == match.charAt(j)) {
-            //    i++;
-            //    j++;
-            //} else {
-            //    if (j == 0) {
-            //        i++;
-            //    } else {
-            //        j = next[j];
-            //    }
-            //}
-
             if (j == -1 || origin.charAt(i) == match.charAt(j)) {
                 i++;
                 j++;
@@ -79,12 +72,6 @@ public class KmpMatcher {
                 j = next[j];
             }
 
-            //if (j == -1 || origin.charAt(i) == match.charAt(j)) {
-            //    i++;
-            //    j++;
-            //} else {
-            //    j = next[j];
-            //}
         }
 
         return next;
@@ -108,7 +95,7 @@ public class KmpMatcher {
             ++k;
             if (pattern[k] == pattern[j]) {
                 next[j] = next[k];
-            } else{
+            } else {
                 next[j] = k;
             }
 

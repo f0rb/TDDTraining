@@ -4,28 +4,29 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * TailRecursion
  *
  * @author f0rb on 2018-09-01.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class TailRecursion {
 
     @SafeVarargs
     public static <T> T recursive(int n, Function<T[], T[]> func, T... args) {
         return n <= 0 ? args[0] : recursive(n - 1, func, func.apply(args));
     }
+
     private static final Map<Integer, Integer> fibMap = new HashMap<>();
     private static int maxKey = 1;
+
     static {
         fibMap.put(0, 1);
         fibMap.put(1, 1);
     }
-
-    //@SafeVarargs
-    //public static <T> T recursive2(int n, Function<T[], T[]> func, T... args) {
-    //    return n <= 0 ? args[1] : recursive2(n - 1, func, func.apply(args));
-    //}
 
     public static int fibonacci(int i) {
         if (i < 2) return 1;
@@ -34,7 +35,7 @@ public class TailRecursion {
 
     public static int fibonacciWithCache(final int i) {
         if (fibMap.containsKey(i)) return fibMap.get(i);
-        synchronized (fibMap){
+        synchronized (fibMap) {
             if (fibMap.containsKey(i)) return fibMap.get(i);
             int recursiveTimes = i - maxKey;
             Integer resultFor = maxKey + 1;
