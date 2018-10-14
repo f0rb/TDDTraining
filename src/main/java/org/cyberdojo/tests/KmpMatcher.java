@@ -12,7 +12,8 @@ import lombok.NoArgsConstructor;
 public class KmpMatcher {
 
     public static int indexOf(String origin, String match) {
-        int i = 0, j = 0;
+        int i = 0;
+        int j = 0;
 
         int[] next = getNext2(match);
 
@@ -60,7 +61,8 @@ public class KmpMatcher {
 
         next[0] = -1;
 
-        int i = 0, j = -1;
+        int i = 0;
+        int j = -1;
 
         while (i != match.length() - 1) {
             //这里注意，i==0的时候实际上求的是next[1]的值，以此类推
@@ -85,7 +87,8 @@ public class KmpMatcher {
         next[0] = -1;
 
 
-        int k = -1, j = 0;
+        int k = -1;
+        int j = 0;
 
         while (j < pattern.length - 1) {
             while (k != -1 && pattern[k] != pattern[j]) {
